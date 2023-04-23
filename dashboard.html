@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- font  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+      <!-- icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            background-color: #ECEEF0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5rem;
+            border-radius: 2rem !important;
+            /* min-height: 100vh; */
+        }
+        #padding{
+            padding: 0 5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* --------------------------------------- header ---------------------------------------------------------- */
+        .header{
+            width: 90vw;
+            display: flex;
+            flex-direction: row;
+            background-color: #fff;
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 0;
+            justify-content: flex-start;
+            align-items: center;
+            padding: .7rem 0;
+            border-top-right-radius: .5rem;
+            border-top-left-radius: .5rem;
+            /* gap: 2rem;   */
+        }
+        #header-left{
+            display: flex;
+            flex-direction: row ;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1.4rem;
+            font-size: 1.3rem;
+            margin-left: 1rem;
+        }
+        #header-right{
+            display: flex;
+            flex-direction: row ;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        #dashboard{
+            position: relative;
+            background-color: #fff;
+            margin-left: 3rem;
+            border-radius: .5rem;
+        }
+        .dot{
+            border: .4rem solid #EB6D63;
+            border-radius: 50%;
+        }
+        .dot:nth-child(2){
+            border: .4rem solid #F4BE51;
+        }
+        .dot:nth-child(3){
+            border: .4rem solid #62C554;
+        }
+        #three-dot{
+            display: flex;
+            flex-direction: row;
+            gap: .5rem;
+        }
+        #header-search{
+            width: 30vw;
+            opacity: .4;
+            /* display: flex; */
+            /* padding: 0 1rem; */
+            text-align: center;
+            position: relative;
+        }
+        #search-icon1{
+            position: relative; 
+            opacity: .4;
+            right: 27rem;
+            z-index: 3;
+            /* top: .7rem; */
+        }
+        #search-icon2{
+            position: relative;
+            opacity: .4;
+            z-index: 3;
+            right: 4.5rem;
+            /* top: .7rem; */
+        }
+        i{
+            opacity: .4;
+        }
+
+        /* ---------------------------------------- nav ------------------------------------------------------------------ */
+        #navbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            /* justify-content: sp/ */
+            align-items: center;
+        }
+        li{
+            list-style: none;
+            font-weight: 600;
+            opacity: .8;
+            font-size: 1.3rem;
+            padding: 0.5rem 1rem;
+            border-radius: .3rem;
+            cursor: pointer;
+        }
+        li:nth-child(3){
+            background-color: #F8FBFC;
+        }
+        #menu{
+            opacity: 1 !important;
+            color: #000;
+            /* font-weight: 700     !important; */
+            margin-right: .5rem;
+        }
+        #search{
+            font-size: 1.3rem;
+            /* opacity: 1 !important; */
+            /* font-weight: ; */
+        }
+
+        /* ---------------------------------------- Customers ------------------------------------------------------------------ */
+        #customers{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4rem;
+        }
+        h1{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        #customers-left-btns{
+            margin-top: 2rem;
+            background-color: #F9FBFC;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            /* position: relative; */
+            /* z-index: 10; */
+            /* top: 0; */
+            /* left: 0; */
+            border: .1rem solid #f1f1f1;
+        }
+        .customers-left-btn{
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            outline: none;
+            opacity: .7;
+            padding: .4rem 1rem;
+            cursor: pointer;
+            /* padding-left: ; */
+        }
+        .customers-left-btn:first-child{
+            background-color: #fff;
+            border-radius: .3rem;
+            box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+        }
+        #customers-right{
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: 500;
+            outline: none;
+            opacity: .7;
+            padding: .4rem 1rem;
+            border: .1rem solid #f1eded;
+            border-radius: 0.3rem;
+            background-color: #fff;
+            box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+        }
+
+      
+         /* ---------------------------------------- list ------------------------------------------------------------------ */
+         .list{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+         }
+         #list-user{
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            /* box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2); */
+            border-radius: 0.6rem;
+            border: .1rem solid #f1eded;
+            margin-top: 2rem;
+        }
+        .list-users{
+            display: flex;
+            flex-direction: column;
+            /* gap: 5rem;   */
+        }
+        .list-users-icons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .list-users-info{
+            display: flex;
+            justify-content: space-around;
+            gap: 15rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+       
+        .icon-size{
+            /* font-size: 6rem; */
+            font-size: 2rem;
+            opacity: .5 !important;
+        }
+        .icon-size:first-child{
+            border: .1rem solid #f1eded;
+            border-radius: .4rem;
+            padding: .5rem;
+            box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+            opacity: .7 !important;
+        }
+        #heading{
+            font-size: 3rem;
+        }
+        p{
+         font-size: 1.3rem;   
+         font-weight: 500;
+         opacity: .8;
+        }
+        .customers-btn{
+            background: none;
+            outline: none;
+            border: none;
+            border-radius: 2rem;
+            padding: .2rem 1rem;
+            text-align: center;
+            border: .15rem solid #000;
+        
+            
+        }
+
+         /* ---------------------------------------- total customers ------------------------------------------------------------------ */
+         #total{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 2.5rem;
+            font-size: 1.3rem;
+         }
+        #total-heading{
+            font-size: 1.7rem !important;
+            font-weight: 600;
+            opacity: .9;  
+            margin-top: .4rem;
+        }
+        #search-bar{
+            border: none;
+            background-color: #F9FBFC;
+            border-radius: .2rem;
+            padding: .3rem 2rem;
+        }
+        #search-bar-icon{
+            position: absolute;
+            right: 24.2rem;
+        }
+      </style>
+</head>
+<body>
+    <section class="container">
+        <div id="dashboard">
+        <!-- /* --------------------------------------- header ---------------------------------------------------------- */ -->
+            <header >
+                <div class="header">
+                <div id="header-left">
+                    <div id="three-dot">
+                        <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    </div>  
+                    <i class="fa-solid fa-clipboard"></i>
+                    <i class="fa-sharp fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div id="header-right">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <input type="text" value="untitleddui.com" readonly="true"  id="header-search" />
+                    <i id="search-icon1" class="fa-solid fa-lock"></i>
+                    <i id="search-icon2" class="fa-sharp fa-solid fa-rotate-right"></i>
+                </div>
+            </div>
+
+
+
+            </header>
+        <!-- /* ---------------------------------------- nav ------------------------------------------------------------------ */ -->
+        <div id="padding">
+            <nav id="navbar">
+                <ul>
+                <li>
+                <i id="menu" class="fa-solid fa-bars"></i>
+                     Untitled UI</li>
+                <li>Home</li>
+                <li>Customers</li>
+                <li>Projects</li>
+                <li>Tasks</li>
+                <li>Reporting</li>
+                <li>Users</li>
+                </ul>
+                <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        </nav>
+
+        <!------------------- Customers ----------------- -->
+        <div id="customers">
+            <div id="customers-left">
+                <h1>Customers</h1>
+                <div id="customers-left-btns">
+                    <button class="customers-left-btn" >Overview</button>
+                    <button class="customers-left-btn" >Table</button>
+                    <button class="customers-left-btn" >List view</button>
+                    <button class="customers-left-btn" >Segment</button>
+                </div>
+            </div>
+            <button id="customers-right">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                Upload
+            </button>
+        </div>
+
+
+        <!------------------------------ list-user -------------->
+
+        <!------------------------------ list-user-1 -------------->
+
+     <div class="list">
+        <div id="list-user">
+            <div class="list-users">
+                <div class="list-users-icons">
+                    <i class="fa-solid fa-users icon-size"></i>
+                <i class="fa-solid fa-ellipsis-vertical icon-size"></i>
+                </div>
+                <div class="list-users-info">
+                    <div>
+                        <p>Total customers</p>
+                    <h2 id="heading">2,420</h2>
+                    </div>
+                <button class="customers-btn" >
+                    <i class="fa-solid fa-arrow-up"></i>
+                    20%</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        <!------------------------------ list-user-2 -------------->
+
+
+        <div id="list-user">
+            <div class="list-users">
+                <div class="list-users-icons">
+                    <i class="fa-solid fa-user icon-size"></i>
+                <i class="fa-solid fa-ellipsis-vertical icon-size"></i>
+                </div>
+                <div class="list-users-info">
+                    <div>
+                        <p>Members</p>
+                    <h2 id="heading">1,210</h2>
+                    </div>
+                <button class="customers-btn" >
+                    <i class="fa-solid fa-arrow-up"></i>
+                    15%</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!------------------------------ list-user-3 -------------->
+
+
+          <div id="list-user">
+            <div class="list-users">
+                <div class="list-users-icons">
+                    <i class="fa-solid fa-desktop icon-size"></i>
+                <i class="fa-solid fa-ellipsis-vertical icon-size"></i>
+                </div>
+                <div class="list-users-info">
+                    <div>
+                        <p>Active naow</p>
+                    <h2 id="heading">316</h2>
+                    </div>
+                <button class="customers-btn" >
+                    <i class="fa-solid fa-arrow-up"></i>
+                    20%</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+     </div>
+
+
+     <!-- /* ---------------------------------------- total customers ------------------------------------------------------------------ */ -->
+
+     <div id="total">
+        <div>
+            <h1 id="total-heading" >Customers(1644)</h1>
+            <p>Customers that have purchased a subscription</p>
+        </div>
+        <input type="text" id="search-bar" placeholder="Search" >
+        <i id="search-bar-icon" class="fa-solid fa-magnifying-glass"></i>
+     </div>
+
+       
+        </div>
+    </section>
+</body>
+</html>
